@@ -1,0 +1,79 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        maven {
+            url "${HTTP_MAVEN_GOOGLE}"
+        }
+        maven {
+            url "${HTTP_MAVEN_DR}"
+        }
+        mavenLocal()
+        maven {
+            url "${HTTP_MAVEN_ALI}"
+        }
+        maven {
+            url "${HTTP_MAVEN_BINTRAY}"
+        }
+        maven {
+            url "${HTTP_MAVEN_JBOSSS}"
+        }
+        maven {
+            url "${HTTP_MAVEN_LIB}"
+        }
+        maven {
+            url "${HTTP_MAVEN_SECOND}"
+        }
+        maven {
+            url "${HTTP_MAVEN_JIT}"
+        }
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        maven {
+            url "${HTTP_MAVEN_GOOGLE}"
+        }
+        maven {
+            url "${HTTP_MAVEN_DR}"
+        }
+        mavenLocal()
+        maven {
+            url "${HTTP_MAVEN_ALI}"
+        }
+        maven {
+            url "${HTTP_MAVEN_BINTRAY}"
+        }
+        maven {
+            url "${HTTP_MAVEN_JBOSSS}"
+        }
+        maven {
+            url "${HTTP_MAVEN_LIB}"
+        }
+        maven {
+            url "${HTTP_MAVEN_SECOND}"
+        }
+        maven {
+            url "${HTTP_MAVEN_JIT}"
+        }
+        mavenCentral()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
